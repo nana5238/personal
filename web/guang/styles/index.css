@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td { margin:0; padding:0; }
+body { font-size:12px; color:#3c3c3c; font-family:Verdana, Microsoft YaHei, Simsun; background:#fff; line-height:24px; }
+fieldset, img { border:0; }
+ol, ul { list-style:none; }
+h1, h2, h3, h4, h5, h6{ font-size:100%;}
+em { font-style:normal;}
+input, button, select, textarea { outline:none; } 
+textarea { resize:none; }
+a { color: #3c3c3c; text-decoration:none; }
+
+.clearfix:before,.clearfix:after{
+	display:table;
+	content:"";}
+.clearfix:after{
+	clear:both;}
+.clearfix{zoom:1;} 
+/*----------------------------------------------------------------------------------*/
+
+/*banner部分开始*/
+
+/* .banner-in{width:100%;height:637px;background:url(../images/banner.jpg) no-repeat top center;position:relative;} */
+/* .banner{width:1212px;height:637px;margin:0 auto;position:relative;}
+.zuo{background:url(../images/left_07.png) no-repeat;width:36px;height:51px;position:absolute;left:0;top:200px;}
+.you{background:url(../images/right_07.png) no-repeat;width:36px;height:51px;position:absolute;right:0;top:200px;}*/
+.banner-in .subnav{width:100%;height:170px;background-color:#fff;opacity:0.7;
+position:absolute;bottom:-103px;}
+.subnav ul{width:1212px;height:170px; background:url(../images/book.png) no-repeat;position:absolute;bottom:0;left:50%;margin-left:-606px;color:#333333;font-family:"宋体"}
+.subnav li{width:250px;margin-top:70px; margin-left:75px;float:left;}
+.subnav li a{width:79px;display:inline-block;font-size:14px;height:30px;}
+
+.subnav .two{margin-left:180px }
+.subnav .three a{width:250px;margin-left:110px;} 
+.box{
+		width:100%;
+		height: 637px;
+		/* background: pink; */
+		position: relative;
+		overflow: hidden;
+	}
+	.box ul{
+		width: 500%;
+		position: absolute;
+		top:0;
+		left: 0;
+	}
+	.box li[class^='hero']
+	{
+		float: left;
+		height: 637px;
+		background: url(../images/1.jpg) no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-position: 50% 55%;
+	}
+
+	.box li.hero2
+	{
+		background-image: url(../images/2.jpg);
+
+	}
+	.box li.hero3
+	{
+		background-image: url(../images/3.jpg);
+	}
+	.box li.hero4
+	{
+		background-image: url(../images/4.jpg);
+	}
+	.left{background:url(../images/left_07.png) no-repeat;width:36px;height:51px;position:absolute;left:0;top:200px;z-index:99;}
+.right{background:url(../images/right_07.png) no-repeat;width:36px;height:51px;position:absolute;right:0;top:200px;z-index:99;}
+
+	</style>
+	

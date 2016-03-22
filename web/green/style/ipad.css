@@ -1,0 +1,47 @@
+ /* 禁用iPhone中Safari的字号自动调整 */
+html {
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* 设置图片视频等自适应调整 */
+img {
+max-width: 100%;
+height: auto;
+width: auto\9; /* ie8 */
+}
+.video embed, .video object, .video iframe {
+width: 100%;
+height: auto;
+}
+
+body{background-image:url(../images/bg2.jpg);}
+.header .logo{display:none;}
+.site-nav{width:100%;}
+.nav ul li{width:11.1111%;padding:0;text-align: center;}
+.nav ul li.first{padding:0;}
+.nav ul li a{font-size:12px;}
+.banner{width:100%;}
+.main{width:100%;height:auto;}
+.main-hd li{width:49.5%;height:auto;margin-right:0;background:none;
+	box-sizing:border-box;border:1px solid #ccc;border-radius:5px;
+	background:-webkit-linear-gradient(top,#fff,#e8e8e8);
+	background:-moz-linear-gradient(top,#fff,#e8e8e8);margin-bottom:10px;}
+.main-hd{border-bottom:0;}	
+
+.main-hd li:nth-child(odd){
+	margin-right:1%;}
+.show{width:99%;/* height:auto; */float:none;box-sizing:border-box;border:1px solid #ccc;border-radius: 10px;margin:0 5px;margin-bottom: 10px;}
+.about dd{float:none;width:100%;box-sizing:border-box;margin-left:10px;}
+.contact p{font-size: 14px;}
+
+
+.subnav{width:100%;height:auto;}
+.products li{margin-right:5%;}
+.footer-in{width:100%;box-sizing:border-box;padding:10px;}
+.subnav{display:none;}
+.padsubnav{display:block;text-align: center;color:#fff;border:1px solid #ccc;border-radius: 5px;height: 35px;line-height:35px;
+   background:-webkit-linear-gradient(top,#ccc,#666);
+	background:-moz-linear-gradient(top,#ccc,#666);}
+.padsubnav a{color:#fff;}
+.back{display:none;}

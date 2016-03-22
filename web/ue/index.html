@@ -1,0 +1,1067 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>UE设计平台</title>
+	
+	<style type="text/css">
+	*{margin:0;padding:0;}
+	a{target:"_black";}
+	ul,ol{list-style: none;}
+	i{font-style:normal;}
+	input{border:0;}
+	a{text-decoration: none;}
+	body{font-family: "微软雅黑";font-size:14px;color:#ACACAC;background-color:#F1F1F1}
+	em{font-style:normal;font-weight:normal;}
+	img{display:block;}
+	/* 头部开始 */
+.head{width:100%;height:50px;background-color:#323436;}
+.head-in{width:1180px;height:50px;margin:0 auto;}
+.head-left{float:left;}
+.head-left .logo{float:left;margin-right: 20px;}
+.head-left .logo a{display:block;width:132px;height:42px;background:url(images/logo.png) no-repeat;}
+.head-left ul{float:left;line-height:50px;}
+.head-left li{float:left;height:50px;}
+.head-left li a{display:block;color:#8C8C8C;font-size:14px;padding:0 20px;}
+.head-left li a:hover{color:#fff;background-color:#454648;}
+.head-left .headmore{position:relative;width:80px;}
+.head-left span{width:7px;height:4px;display:inline-block;background:url(images/yy-icon.png)no-repeat -505px -232px;position:absolute;right:15px;top:25px;}
+.headmore a:hover span {background:url(images/yy-icon.png) no-repeat -123px -724px;}
+.more-xiala {display:none;height:100px;}
+.more-xiala li{float:none;height:28px;width:93px;text-align: center;}
+.more-xiala li a{font-size:12px;background-color:#454648;color:#8c8c8c;line-height:28px;}
+.more-xiala li a:hover{background-color:#6BC30D;}
+.head-right{float:right;}
+.head-right .father{background:url(images/yy-rnso.png) no-repeat;width:30px;height:26px;display:block;float:left;margin-top:12px;margin-right:10px;cursor:pointer;}
+.head-right .father:hover{background:url(images/yy-rnsoh.png) no-repeat;}
+.head-right div{float:left;position:relative;}
+.denglu,.zhuce{width:70px;height:32px;text-align:center;display:block;line-height:32px;float:left;margin-top:9px;}
+.denglu{background-color:#505050;color:#ACACAC;}
+.denglu:hover{color:#fff;}
+.zhuce{background-color:#6BC30D;color:#fff;}
+.seach{width:155px;height:21px;position:absolute;right:158px;background:url(images/yy-rnso.png) no-repeat #fff;border-radius:2em;padding-left:25px;padding-top:5px;display:none;}
+.seach input{color:#929292;}
+/* banner部分开始 */
+.banner{width:100%;height:170px;background:url(images/banner.jpg) no-repeat;text-align:center;padding-top:30px;}
+ #clock{
+            font-size: 48px; 
+            color:#729cb7;
+            text-align: center;
+            font-weight: 100          
+        }
+.guanzhu{color:#729cb7;}
+.uemo{width:240px;margin-left:560px;margin-top:25px;overflow: hidden}
+.uemo a{float:left;width:120px;height:30px;line-height:30px;text-align: center;}
+.uemo .one{background-color:#00B4DE;color:#fff;}
+.uemo .two{background-color:#486D7F;color:#8096A4;}
+
+/* nav部分开始 */
+.nav{width:100%;height:60px;box-shadow:0 1px 2px rgba(0, 0, 0, 0.1)}
+.nav-in{width:1180px;height:40px;margin:0 auto;padding:10px 0;}
+.nav-in{z-index:999;}
+.hangye,.tuijian,.yanse,.ren{float:left;position: relative;text-align:center;}
+.weizhi{width:120px;overflow:hidden;}
+.hangye span,.tuijian span,.yanse span,.ren span{text-align:center;line-height:40px;color:#535353;font-size:12px;display:inline-block;z-index:999;}
+.nav-in .icon{background:url(images/yy-icon.png) no-repeat -505px -232px;width:7px;height:4px;margin:2px 5px;position: absolute;}
+span:hover .icon{background:url(images/yy-icon.png) no-repeat -123px -724px;}
+.tubiao{display:inline-block;margin:-4px -2px;width:22px;height:18px;background:url(images/yy-icon.png) no-repeat;}
+
+.hangye span{width:126px;height:40px;background-color:#EDEEEE;box-shadow:0 1px 1px rgba(0, 0, 0, 0.11) inset}
+.hangye .icon{top:16px;right:30px;}
+.hangye span ul,.tuijian .weizhi ul,.yanse .weizhi ul,.yanse .weizhi ul,.ren .weizhi ul{z-index:999;position:absolute;width:100%;}
+
+.tuijian .icon{top:16px;right:0;}
+.tuijian .tubiao{background-position:-128px -524px;}
+
+.tuijian .zuixin{background-position:-128px -524px;margin:-5px 2px -5px 0;}
+.tuijian li:hover .zuixin{background-position:0px -525px;}
+
+.tuijian .xihuan{background-position:-395px -513px;margin:-7px 2px -7px 0;}
+.tuijian li:hover .xihuan{background-position:-198px -523px;}
+
+.tuijian .liulan{background-position:-213px -256px;margin:-7px 7px -7px 0;}
+.tuijian li:hover .liulan{background-position:0 -261px;}
+
+.tuijian .pinglun{background-position:-482px -343px;margin:-7px 2px -7px 0;}
+.tuijian li:hover .pinglun{background-position:-416px -311px;}
+
+.tuijian .fabu{background-position:-280px -700px;margin:-7px 2px -7px 0;}
+.tuijian li:hover .fabu{background-position:-250px -700px;}
+
+.yanse .icon{top:16px;right:0;}
+.yanse .tubiao{background-position:-249px -656px;}
+.nav-in .yanse ul{width:300px;height:130px;padding:20px;background-color: #fff;box-shadow:0 1px 6px rgba(0, 0, 0, 0.2);overflow:hidden}
+.yanse li {width:30px;height:25px;float:left;}
+.yanse li a{width:30px;height:25px;display:inline-block;}
+
+
+.ren .icon{top:16px;right:0;}
+.ren .tubiao{background-position:-209px -387px;}
+
+
+.gonggao{width:600px;height:40px;line-height:40px;color:#535353;font-size:12px;float:left;margin-left:20px;position: relative;padding-left:30px;}
+.gonggao .tubiao{background:url(images/yy-icon.png) no-repeat 0px -655px;margin:11px 0;float:left;}
+
+.txtMarquee-top{ width:450px; height:40px; overflow:hidden; position:relative;float:left   }
+
+.txtMarquee-top .bd{ padding:9px;  }
+.txtMarquee-top .infoList li a{ height:24px; line-height:24px; color:#535353;  }
+.txtMarquee-top .infoList li .date{ float:right; color:#999;  }
+
+
+
+.shangxia{width:7px;height:40px;display: inline-block;position:absolute;right:0;top:12px;float:right;}
+.shang{background:url(images/yy-icon.png) no-repeat -123px -724px;width:7px;height:4px;display: block;margin-bottom:10px;cursor:pointer;}
+.xia{background:url(images/yy-icon.png) no-repeat -505px -232px; width:7px;height:4px;display: block;cursor:pointer;}
+
+
+.hangye li a,.yanse li a,.tuijian li a,.ren li a{width:100%;display:block;height:35px; color:#747474; font-size: 12px;line-height:35px;border-bottom:1px solid #ccc;background-color: #fff;}
+.nav-in li a:hover{background-color: #6BC30D;color:#fff;}
+.nav-in li .first{padding-top:10px;color:#6BC30D;}
+.nav-in li .last{border-bottom:0;padding-bottom:5px;}
+.hangye ul,.tuijian ul,.ren ul,.yanse ul{ display:none;  position:relative; box-shadow:0 1px 6px rgba(0, 0, 0, 0.2)}
+.nav-in ul ul{position:absolute;top:0;left:126px;width:126px;box-shadow:0 1px 6px rgba(0, 0, 0, 0.2)}
+/*main部分开始*/
+.main{width:100%;background-color:#F1F1F1;}
+.main-in{width:1180px;margin:0 auto;  overflow:hidden;}
+.box{ width:580px; height:270px;position:relative;overflow:hidden;float:left;margin-top:45px;margin-right:20px}
+.box ul{width: 800%;position:relative;}
+.box ul li{float:left;position:relative;}
+.box li p{width:560px; height:50px; background-color:#fff; position: absolute; bottom:-70px; left:0;padding:10px;}
+.box li p img{width:50px;height:50px;display:inline-block;float:left;}
+.box li p span{width:80px;height:50px;float:left;margin:0 10px}
+.box li p  a{font-size:12px;line-height:22px;color:#535353}
+.box li p  em{font-size:12px;line-height:28px;color:#6bc30d}
+.box li p .jieshao{width:350px;} 
+.box li .jieshao a{font-size:14px;line-height:23px;color:#535353;font-weight:bold;}
+.box li .jieshao em{font-size:12px;line-height:22px;color:#929292}
+.left,.right{position: absolute; cursor: pointer; width:25px; height:45px;background-color: rgba(0, 0, 0, 0.5); display: none;top:105px;z-index:999;text-align:center;}
+.left{left:0}
+.left:hover,.right:hover{background-color:#6BC30D;}
+.right {right:0;}
+
+.left span,.right span{display:inline-block;background:url(images/yy-icon.png) no-repeat;width:11px;height:18px;margin-top:12px;overflow:hidden;}
+.left span{background-position:-190px -590px;}
+.right span{background-position:-62px -663px;}
+
+.main-small{width: 280px;height:270px; box-shadow:0 1px 2px rgba(0, 0, 0, 0.1); overflow: hidden;float:left;margin-top:45px;margin-right:20px}
+.current{margin-right:0}
+.main-small li{float: left;  width:280px; height: 270px; position: relative; overflow: hidden;}
+.main-small  p{width: 240px; height: 25px; position: absolute; left:0; bottom:0;  text-align:center; line-height:24px; font-size:14px; border-top:1px solid #f2f2f2;padding:10px 20px ;background-color:#fff;cursor:pointer;}
+.main-small  p img{width:24px;height:24px;float:left;margin-right:8px;}
+.main-small  p span{float:left;}
+.main-small  p.main-small-two{bottom:45px;border-top:0;padding: 15px 20px;height:15px;line-height:13px;cursor:default;}
+.main-small p a{width:16px;height:16px;display:inline-block;float:right;background:url(images/mo.png) no-repeat;margin-top:5px;}
+
+.yanjing,.xinxi,.aixin{background:url(images/yy-icon.png) no-repeat;display:inline-block;width:19px;height:14px;margin-right:30px;padding-left:25px;}
+.yanjing{background-position:-280px -255px;}
+.xinxi{background-position:-481px -343px;}
+.aixin{background-position:-392px -512px;}
+.main-small  p.main-small-three{font-size:16px;color:#3a3a3a; bottom:45px;border-top:0;display:none;text-align:left;}
+
+/*翻页部分开始*/
+.xiayiye{width:1180px;height:36px;margin:0 auto;margin-top:46px;margin-bottom:40px;}
+.xiayiye a{display:block;float:left;width:36px;height:36px;text-align:center;line-height:36px;background:#fff;color:#A9A9A9;margin-right:5px;}
+.xiayiye a.current{background-color:#70ca10;color:#fff;}
+.xiayiye a:not(.current):hover{background-color:#969696;color:#fff;}
+.xiayiye span{margin:0 20px;float:left;line-height:27px;}
+.xiazhang span{background:url(images/yy-icon.png)no-repeat 0 -721px;width:11px;height:18px;display:inline-block;position:relative;top:8px;left:-8px;}
+
+
+/*合作商开始*/
+.hezuo{width:1180px;height:201px;background-color:#fff;margin:0 auto;}
+.hezuo-top{width:100%;height:60px;border-bottom:1px solid #F0F1F1;line-height:60px;}
+.hezuo-left{float:left;font-size:18px;color:#6b6b6b;padding-left:20px;}
+.hezuo-right{float:right;width:180px;height:60px;border-left:1px solid #F0F1F1;color:#7e7e7e;font-size:14px;text-align:center;}
+.hezuo-bottom{padding:20px 20px;}
+.hezuo-bottom li{float:left;width:128px;margin-right:20px;}
+.hezuo-bottom li div{text-align:center;color:#5a5a5a;}
+.hezuo-bottom li div em{color:#a8a8a8;font-size:13px;}
+
+
+/*友情链接开始*/
+.friend{width:1140px;height:48px;margin:50px auto;padding:20px 20px;background-color:#fff;color:#3e3e3e;font-size:12px;line-height:24px;}
+.friend span{margin-right:4px;}
+.friend a{color:#949494;margin-right:20px;}
+
+/*footer部分开始*/
+.footer{height:100px;width:100%;background-color:#222324;}
+.footer-in{width:1180px;height:100px;margin:0 auto;}
+.link{padding:18px 0 20px; }
+.link a{margin-right:40px;font-size:14px;color:#cecece;line-height:31px;height:17px;display:inline-block;}
+.weibo{width:22px ;height:22px;background:url(images/yy-icon.png) no-repeat 0 -190px;display:inline-block;line-height:25px;}
+.link span{margin-right:40px;font-size:12px;color:#8e8e8e;font-family:"微软雅黑"}
+.banquan{font-size:12px;color:#8e8e8e;font-family:Arial;}
+.banquan em{color:#70ca10;}
+
+<!--侧部分开始-->
+.subnav{position:fixed;bottom:10px;right:10px;}
+.erweima{display:block;width:20px;height:20px;background:rgba(0,0,0,0.2);padding:10px ;}
+.erweima span{display:block;background:url(images/yy-icon.png) no-repeat -11px -111px;width:18px;height:18px;}
+.fanhui{display:block;width:24px;height:16px;background:rgba(51,51,51,0.6);padding:12px 8px;}
+.fanhui:hover{background-color:#6BC30D;}
+.fanhui span{display:block;background:url(images/yy-icon.png) no-repeat -99px -114px;width:23px;height:12px;} 
+
+
+	</style>
+    <script type="text/javascript" src="jquery1.42.min.js"></script>
+	<script type="text/javascript" src="jquery.SuperSlide.2.1.1.js"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$(window).scroll(function(){
+			var num=$(document).scrollTop();
+			if(num>0)
+			{
+			  $(".head").css({"position":"fixed","top":0,"z-index":9999})
+			}
+			else
+			{
+			  $(".head").css("position","static");
+			}
+			})
+			
+			$(window).scroll(function(){
+			var number=$(document).scrollTop();
+			if(number==0)
+			{
+			  $(".subnav").hide()
+			}
+			else
+			{
+			  $(".subnav").show().css({"position":"fixed","bottom":10,"right":10})
+			}
+			})
+			
+			/*$(".fanhui").click(function(){
+			var num=$(document).scrollTop();
+			$(window).stop().animate({top:0},500)
+			})*/
+			
+			
+		$(".headmore").mouseenter(function(){
+		   $(this).children("ul").stop().slideDown()
+		}).mouseleave(function(){
+          $(this).children("ul").stop().slideUp()
+		})	
+
+		$(document).click(function(event){
+			if($(event.target).is(".father"))
+			{
+				$(".seach").show();
+			}
+			else
+			{
+				$(".seach").hide();
+			}			
+			}) 	
+
+	    $(".nav-in  span").mouseenter(function(){
+		   $(this).children("ul").stop().slideDown()
+		}).mouseleave(function(){
+          $(this).children("ul").stop().slideUp()
+		})
+
+		$(".nav-in  span ul li").mouseenter(function(){
+		   $(this).children("ul").stop().slideDown()
+		}).mouseleave(function(){
+          $(this).children("ul").stop().slideUp()
+		})
+
+		$(".yanse li a").mouseenter(function(){
+			$(this).css({"width":"40px","height":"30px","position":"absolute","z-index":999})
+		}).mouseleave(function(){
+			$(this).css({"width":"30px","height":"25px","z-index":0})
+		})	
+
+		$(".box").hover(function(){
+		$(".left,.right").show()
+	},function(){
+		$(".left,.right").hide()
+	})
+
+	$(".box ul li:first").clone().appendTo('.box ul')
+	var pic=$(".box ul li").index();
+	$(".right").click(function(event) {
+			fun();
+		});
+		$(".left").click(function(event) {
+			pic--;
+			if(pic<0)
+			{
+				pic=4;
+				$(".box ul").css("left",-2900);
+			}
+			$(".box ul").stop().animate({"left":-pic*580}, 500);
+			});
+			var timer=setInterval(fun, 3000)
+		function fun()
+		{
+			pic++;
+			if(pic>5)
+			{
+				pic=1;
+				$(".box ul").css("left",0);
+			}
+			$(".box ul").stop().animate({"left":-pic*580}, 500);
+			}
+			$(".box").hover(function() {
+			clearInterval(timer);
+			timer=null;
+		}, function() {
+			clearInterval(timer);
+			timer=setInterval(fun, 3000)
+		});
+	    $(".box li").hover(function() {
+			$(this).children('div,p').stop().animate({"bottom":0},400);
+		}, function() {
+			$(this).children('div,p').stop().animate({"bottom":-70},400);
+		});
+		$(".main-small").hover(function() {
+			$(this).find('.main-small-three').show().stop().animate({"bottom":86},200);
+		}, function() {
+			$(this).find('.main-small-three').hide().stop().animate({"bottom":45},200);
+		});
+
+        $(".txtMarquee-top").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:5,interTime:50});
+	})
+$(function() {
+            function timer() {        
+            var endtime = new Date("2015/02/17 24:00:00");
+            // 这里需要去后台取值，这里暂时给大家写了规定日期  注意日期的格式
+            var nowtime = new Date();
+            var result = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+            //核心就是让最终时间，减去当前时间  注意，我们得到是秒数 
+            //console.log(result)
+             d = parseInt(result / 3600 / 24);  // 这个嘛，想想怎么得到换算小时数
+             h = parseInt((result / 3600) % 24);
+             m = parseInt((result / 60) % 60);
+             s = parseInt(result % 60);
+            
+            var msg = d+"天"+h+"小时"+m+"分"+s+"秒";
+            //console.log(msg);
+            if (result <= 0) { //如果到了时间
+                $("#clock").html("强哥会想你们的！");
+                
+                clearInterval(sh);
+            }
+            $("#clock").html(msg)
+            
+        }
+        timer();
+        var sh;
+        sh = setInterval(timer, 1000);  
+       });
+	</script>
+    
+    
+    
+    
+</head>
+<body>
+	<!-- 头部开始 -->
+	<div class="head">
+		<div class="head-in">
+			<div class="head-left">
+				<div class="logo">
+					<h1><a href="http://nana1990.ml"></a></h1>
+				</div>
+				<ul>
+					<li><a href="#"> 发现</a></li>
+					<li><a href="#"> 文章</a></li>
+					<li><a href="#"> 设计师</a></li>
+					<li><a href="#"> 帮帮忙</a></li>
+					<li class="headmore">
+						<a href="#"> 更多
+							<span></span>
+						</a>
+						<ul class="more-xiala">
+							<li><a href="#">酷站推荐</a></li>
+							<li><a href="#">资源下载</a></li>
+							<li><a href="#">网址导航</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="head-right">
+				<div class="father">
+					<div class="seach">
+						<input type="text"  value="关键字查找" />
+				    </div>
+				</div>
+				<div>
+					<a href="#" class="denglu">登录</a>
+					<a href="#" class="zhuce">注册</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- banner部分开始 -->
+	<div class="banner">
+		<!-- <p class="time">
+			<span class="d">59</span>天<em class="bor"></em>
+			<span class="h">24</span>时<em class="bor"></em>
+			<span class="f">60</span>分<em class="bor"></em>
+			<span class="m">60</span>秒
+		</p> -->
+		<div id="clock"></div>
+		<p class="guanzhu">关注倒计时，抢U码，赢得我的免费个人网站</p>
+		<p class="uemo">
+			<a class="one" href="#">什么是UEMO</a>
+			<a class="two" href="#">抢U码</a>
+		</p>
+		
+	</div>
+	<!-- nav部分开始 -->
+    <div class="nav">
+		<div class="nav-in">
+		<div class="hangye">
+			<span>行页
+				<ul>
+					<li><a herf="#" class="first">行业</a></li>
+					<li >
+						<a href="#">网页</a>
+						<ul >
+							<li><a class="first" href="">企业集团</a></li>
+							<li><a href="">专题/Banner</a></li>
+							<li><a href="">门户电商</a></li>
+							<li><a href="">游戏网页</a></li>
+							<li><a href="">汽车/车类</a></li>
+							<li><a href="">服装服饰</a></li>
+							<li><a href="">餐饮美食</a></li>
+							<li><a class="last" href="">其他网页</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">GUI </a>
+						<ul >
+							<li><a class="first" href="">图标ICON</a></li>
+							<li><a href="">移动应用</a></li>
+							<li><a href="">界面设计</a></li>
+							<li><a href="">原型/UE</a></li>
+							<li><a href="">UI动效</a></li>
+							<li><a class="last"  href="">其他GUI</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">平面</a>
+						<ul >
+							<li><a class="first" href="">VI/CI</a></li>
+							<li><a href="">VI/CI</a></li>
+							<li><a href="">LOGO</a></li>
+							<li><a href="">字体设计</a></li>
+							<li><a href="">海报设计</a></li>
+							<li><a href="">图形设计</a></li>
+							<li><a href="">包装设计</a></li>
+							<li><a class="last"  href="">其他平面</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">摄影</a>
+						<ul >
+							<li><a class="first" href="">人像摄影</a></li>
+							<li><a href="">风光摄影</a></li>
+							<li><a href="">婚礼婚纱</a></li>
+							<li><a href="">摄影后期</a></li>
+							<li><a class="last"  href="">其他摄影</a></li>
+
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="last">其他</a>
+						<ul >
+							<li><a class="first" href="">插画</a></li>
+							<li><a href="">三维</a></li>
+							<li><a href="">建筑设计</a></li>
+							<li><a class="last"  href="">其他</a></li>
+						</ul>
+					</li>
+				</ul>
+				<span class="icon"></span>
+			</span>
+		</div>
+		<div class="tuijian">
+			<span class="weizhi">
+				<span class="tubiao"></span>
+				最新推荐
+				<ul>
+					<li class="first">
+						<a href=""><span class="tubiao zuixin"></span>最新推荐</a>
+					</li>
+					<li>
+						<a href=""><span class="tubiao xihuan"></span>最多喜欢</a>
+					</li>
+					<li>
+						<a href=""><span class="tubiao liulan"></span>最多浏览</a>
+					</li>
+					<li>
+						<a href=""><span class="tubiao pinglun"></span>最多评论</a>
+					</li>
+					<li>
+						<a href="" class="last" ><span class="tubiao fabu"></span>最新发布</a>
+					</li>
+				</ul>
+				<span class="icon"></span>
+			</span>
+		</div>
+		<div class="yanse">
+			<span class="weizhi">
+				<span class="tubiao"></span>
+				颜色
+				<ul>
+					<li><a href="#" style="background:#FFFFFF"></a></li>
+					<li><a href="#" style="background:#C9F5FF"></a></li>
+					<li><a href="#" style="background:#CBDEFF"></a></li>
+					<li><a href="#" style="background:#BFB6FF"></a></li>
+					<li><a href="#" style="background:#D7B6FF"></a></li>
+					<li><a href="#" style="background:#EFBFDD"></a></li>
+					<li><a href="#" style="background:#FFCFC1"></a></li>
+					<li><a href="#" style="background:#FFE8C5"></a></li>
+					<li><a href="#" style="background:#FFF6D4"></a></li>
+					<li><a href="#" style="background:#E2EFC3"></a></li>
+
+					<li><a href="#" style="background:#DBDBDB"></a></li>
+					<li><a href="#" style="background:#67E2FF"></a></li>
+					<li><a href="#" style="background:#69A1FF"></a></li>
+					<li><a href="#" style="background:#6A55FF"></a></li>
+					<li><a href="#" style="background:#A155FF"></a></li>
+					<li><a href="#" style="background:#E16CB3"></a></li>
+					<li><a href="#" style="background:#FF835F"></a></li>
+					<li><a href="#" style="background:#FFC265"></a></li>
+					<li><a href="#" style="background:#FFE371"></a></li>
+					<li><a href="#" style="background:#C0E073"></a></li>
+
+					<li><a href="#" style="background:#9B9B9B"></a></li>
+					<li><a href="#" style="background:#0DD1FF"></a></li>
+					<li><a href="#" style="background:#0F67FF"></a></li>
+					<li><a href="#" style="background:#1E00FB"></a></li>
+					<li><a href="#" style="background:#7000FB"></a></li>
+					<li><a href="#" style="background:#DD1690"></a></li>
+					<li><a href="#" style="background:#FF3D05"></a></li>
+					<li><a href="#" style="background:#FF9E0A"></a></li>
+					<li><a href="#" style="background:#FFD118"></a></li>
+					<li><a href="#" style="background:#A4DC1C"></a></li>
+
+					<li><a href="#" style="background:#4D4D4D"></a></li>
+					<li><a href="#" style="background:#0091B2"></a></li>
+					<li><a href="#" style="background:#0042B4"></a></li>
+					<li><a href="#" style="background:#1300A1"></a></li>
+					<li><a href="#" style="background:#4800A1"></a></li>
+					<li><a href="#" style="background:#9C0060"></a></li>
+					<li><a href="#" style="background:#AC0000"></a></li>
+					<li><a href="#" style="background:#AF6900"></a></li>
+					<li><a href="#" style="background:#BB9600"></a></li>
+					<li><a href="#" style="background:#729F00"></a></li>
+
+					<li><a href="#" style="background:#161616"></a></li>
+					<li><a href="#" style="background:#00586D"></a></li>
+					<li><a href="#" style="background:#00296E"></a></li>
+					<li><a href="#" style="background:#0A005D"></a></li>
+					<li><a href="#" style="background:#2A005D"></a></li>
+					<li><a href="#" style="background:#560035"></a></li>
+					<li><a href="#" style="background:#661600"></a></li>
+					<li><a href="#" style="background:#693F00"></a></li>
+					<li><a href="#" style="background:#765E00"></a></li>
+					<li><a href="#" style="background:#405A00"></a></li>
+				</ul>
+				<span class="icon"></span>
+			</span>
+		</div>
+		<div class="ren">
+			<span class="weizhi">
+				<span class="tubiao"></span>
+				所有者
+				<ul>
+					<li class="first">
+						<a href="">所有者</a>
+					</li>
+					<li>
+						<a href="">原创</a>
+					</li>
+					<li class="last">
+						<a href="">转载</a>
+					</li>
+				</ul>
+				<span class="icon"></span>
+			</span>
+		</div>
+		<div class="gonggao">
+				<span class="tubiao"></span>                              <div class="txtMarquee-top">
+					<div class="bd">
+						<ul class="infoList">
+							<li><span class="date">2011-11-11</span><a href="#" target="_blank">中国打破了世界软件巨头规则</a></li>
+							<li><span class="date">2011-11-11</span><a href="#" target="_blank">口语：会说中文就能说英语！</a></li>
+							<li><span class="date">2011-11-11</span><a href="#" target="_blank">农场摘菜不如在线学外语好玩</a></li>
+							<li><span class="date">2011-11-11</span><a href="#" target="_blank">数理化老师竟也看学习资料？</a></li>
+							<li><span class="date">2011-11-11</span><a href="#" target="_blank">学英语送ipad2,45天突破听说</a></li>
+							<li><span class="date">2011-11-11</span><a href="#" target="_blank">学外语，上北外！</a></li>
+							<li><span class="date">2011-11-11</span><a href="#" target="_blank">那些无法理解的荒唐事</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="shangxia">
+					<a  class="shang" href=""></a>
+					<a  class="xia" href=""></a>
+				</div>
+		</div>
+        </div>
+	</div>
+
+    <!-- main部分开始 -->
+    <div class="main">
+		<div class="main-in">
+        <ul class="box">      
+                <li>
+                    <a href="javascript:;" class="left">
+                    	<span></span>
+                    </a>
+                    <a href="javascript:;" class="right">
+                        <span></span>
+                    </a>
+                    <ul>
+                        <li>
+                        	<a href="#"><img src="images/1418648818304.jpg"/></a>
+                            <p>
+                            	<img src="images/1387952894227.jpg" alt="" />
+                            	<span>
+                                    <a>呆呆sss</a><br>
+                                    <em>其他网页</em>
+                                </span>
+                                <span class="jieshao">
+                                   <a>启恒文化</a><br>
+                                   <em>由于该项目还未客户还未定稿所以上传稿件做了缩小处理！</em>
+                                </span>
+                            	
+                            </p> 
+                        </li>
+                        <li>
+                        	<a href="#"><img src="images/1418648935370.jpg"/></a>
+                            <p>
+                            	<img src="images/100.png" alt="" />
+                            	<span >
+                                    <a>犯困进行时</a><br>
+                                    <em>插画</em>
+                                </span>
+                                <span class="jieshao">
+                                    <a>鼠绘心情日记（其中2副板绘  其他均为鼠绘）</a><br>
+                                    <em>前阵无事   画了些小心情打发时间</em>
+                                </span>
+                            </p> 
+                        </li>
+                        <li>
+                        	<a href="#"><img src="images/1418752478841.jpg"/></a>
+                            <p>
+                            	<img src="images/1393910646892.jpg" alt="" />
+                            	<span >
+                                    <a>UPossible</a><br>
+                                    <em>专题/Banner</em>
+                                </span>
+                                <span class="jieshao">
+                                    <a>一些海报与钻展</a>
+                                    
+                                </span>
+                            </p> 
+                        </li>
+                        <li>
+                        	<a href="#"><img src="images/1418786820452.jpg"/></a>
+                            <p>
+                            	<img src="images/1405942493551.jpg" alt="" />
+                            	<span >
+                                    <a>Robber</a><br>
+                                    <em>其他网页</em>
+                                </span>
+                                <span class="jieshao" >
+                                    <a>COKE</a><br>
+                                    <em>可口可乐畅饮无限</em>
+                                </span>
+                            </p> 
+                        </li>
+                        <li>
+                        	<a href="#"><img src="images/ad.png"/></a>
+                            <p>
+                            	<img src="images/100.jpg" alt="" />
+                            	<span >
+                                    <a>新火</a><br>
+                                    <em>企业集团</em>
+                                </span>
+                                <span class="jieshao">
+                                    <a>武汉银泰</a>
+                                    
+                                </span>
+                            </p> 
+                        </li>
+                    </ul>                      
+                </li>
+           </ul>
+           <ul class="main-small ">
+                <li >
+                    <a href="idea/idea.html" ><img src="images/14196655814.jpg" alt="" /></a>
+                        <p class="main-small-three">顾家家居品牌形象</p>
+                        <p class="main-small-two">
+
+                        	<span class="yanjing">194</span>
+                        	<span class="xinxi">1</span>
+                        	<span class="aixin">3</span>
+                        </p>
+                        <p>
+                            <img src="images/101.png">
+                            <span>忆形达意(原创-VI/CI)</span>
+                            <a></a>
+                        </p>
+                </li>       
+			</ul>
+             <ul class="main-small current">
+                <li >
+                    <a href="haier/index.html"><img src="images/1419562780494.jpg" alt="" /></a>
+                        <p class="main-small-three">哈肉联跨年</p>
+                        <p class="main-small-two">
+                        	<span class="yanjing">1173</span>
+                        	<span class="xinxi">8</span>
+                        	<span class="aixin">9</span>
+                        </p>
+                        <p>
+                            <img src="images/1392114660932.jpg">
+                            <span>趋近于零(原创-门户电商)</span>
+                            <a></a>
+                        </p>
+                </li>       
+			</ul>
+            
+            <ul class="main-small ">
+                <li >
+                    <a href="#"><img src="images/1419485815935_280x180.jpg" alt="" /></a>
+                        <p class="main-small-three">WISDOM UNION</p>
+                        <p class="main-small-two">
+                        	<span class="yanjing">1822</span>
+                        	<span class="xinxi">1</span>
+                        	<span class="aixin">10</span>
+                        </p>
+                        <p>
+                            <img src="images/102.jpg">
+                            <span>Jonassen(原创-LOGO)</span>
+                            <a></a>
+                        </p>
+                </li>       
+			</ul>
+            <ul class="main-small ">
+                <li >
+                    <a href="#"><img src="images/1419487633670.jpg" alt="" /></a>
+                        <p class="main-small-three">高露洁创意广告</p>
+                        <p class="main-small-two">
+                        	<span class="yanjing">1847</span>
+                        	<span class="xinxi">4</span>
+                        	<span class="aixin">19</span>
+                        </p>
+                        <p>
+                            <img src="images/1379942648289.jpg">
+                            <span>Alisa(转载-其他)</span>
+                            <a></a>
+                        </p>
+                </li>       
+			</ul>
+            <ul class="main-small ">
+                <li >
+                    <a href="#"><img src="images/1419476808966.jpg" alt="" /></a>
+                        <p class="main-small-three">[ Ô, les mains ]</p>
+                        <p class="main-small-two">
+                        	<span class="yanjing">2112</span>
+                        	<span class="xinxi">14</span>
+                        	<span class="aixin">14</span>
+                        </p>
+                        <p>
+                            <img src="images/1380790839327.jpg">
+                            <span>Photography(转载-其他)</span>
+                            <a></a>
+                        </p>
+                </li>       
+			</ul>
+            <ul class="main-small current ">
+                <li >
+                    <a href="#"><img src="images/141947319366.jpg" alt="" /></a>
+                        <p class="main-small-three">赵涌app2.0</p>
+                        <p class="main-small-two">
+                        	<span class="yanjing">1996</span>
+                        	<span class="xinxi">2</span>
+                        	<span class="aixin">15</span>
+                        </p>
+                        <p>
+                            <img src="images/1384601972694.jpg">
+                            <span>u21(原创-界面设计)</span>
+                            <a></a>
+                        </p>
+                </li>       
+			</ul>
+            
+            
+             <ul class="main-small ">
+                <li >
+                    <a href="#"><img src="images/1419400559224.jpg" alt="" /></a>
+                        <p class="main-small-three">国外蛋糕模具详情</p>
+                        <p class="main-small-two">
+                        	<span class="yanjing">194</span>
+                        	<span class="xinxi">1</span>
+                        	<span class="aixin">3</span>
+                        </p>
+                        <p>
+                            <img src="images/1416755417801.png">
+                            <span>Jonassen_LX(原创-门户电商)</span>
+                            <a></a>
+                        </p>
+                </li>       
+			</ul>
+            <ul class="main-small ">
+                <li >
+                    <a href="#"><img src="images/1419403858596.jpg" alt="" /></a>
+                        <p class="main-small-three">WISEMIND - 海报篇（下）</p>
+                        <p class="main-small-two">
+                        	<span class="yanjing">2557</span>
+                        	<span class="xinxi">3</span>
+                        	<span class="aixin">24</span>
+                        </p>
+                        <p>
+                            <img src="images/1403232752676.jpg">
+                            <span>WiseMind(原创-海报设计)</span>
+                            <a></a>
+                        </p>
+                </li>       
+			</ul>
+            <ul class="main-small ">
+                <li >
+                    <a href="#"><img src="images/1419356792312.jpg" alt="" /></a>
+                        <p class="main-small-three">《蓝》</p>
+                        <p class="main-small-two">
+                        	<span class="yanjing">2730</span>
+                        	<span class="xinxi">4</span>
+                        	<span class="aixin">12</span>
+                        </p>
+                        <p>
+                            <img src="images/1419139567618.jpg">
+                            <span>芭蕾娃娃lea(原创-其他)</span>
+                            <a></a>
+                        </p>
+                </li>       
+			</ul>
+            <ul class="main-small current ">
+                <li >
+                    <a href="#"><img src="images/1419344828372.jpg" alt="" /></a>
+                        <p class="main-small-three">Sleep Control</p>
+                        <p class="main-small-two">
+                        	<span class="yanjing">3094</span>
+                        	<span class="xinxi">0</span>
+                        	<span class="aixin">14</span>
+                        </p>
+                        <p>
+                            <img src="images/1404994500885.png">
+                            <span>uidesign(转载-移动应用)</span>
+                            <a></a>
+                        </p>
+                </li>       
+			</ul>  
+            
+            <ul class="main-small ">
+                <li >
+                    <a href="#"><img src="images/1419305929606.jpg" alt="" /></a>
+                        <p class="main-small-three">【PSD下载】教你做FPS游戏风格的专题-男人胯下的战斗</p>
+                        <p class="main-small-two">
+                        	<span class="yanjing">4305</span>
+                        	<span class="xinxi">5</span>
+                        	<span class="aixin">38</span>
+                        </p>
+                        <p>
+                            <img src="images/1419324947155.jpg">
+                            <span>四两(原创-游戏网页)</span>
+                            <a></a>
+                        </p>
+                </li>       
+			</ul>
+            <ul class="main-small ">
+                <li >
+                    <a href="#"><img src="images/1419312138528.jpg" alt="" /></a>
+                        <p class="main-small-three">书法字体设计の素材篇</p>
+                        <p class="main-small-two">
+                        	<span class="yanjing">4830</span>
+                        	<span class="xinxi">10</span>
+                        	<span class="aixin">53</span>
+                        </p>
+                        <p>
+                            <img src="images/1410488407438.jpg">
+                            <span>MrRain(原创-字体设计)</span>
+                            <a></a>
+                        </p>
+                </li>       
+			</ul>
+            <ul class="main-small ">
+                <li >
+                    <a href="#"><img src="images/141930548241.jpg" alt="" /></a>
+                        <p class="main-small-three">自己对设计的一些比较概括的总结</p>
+                        <p class="main-small-two">
+                        	<span class="yanjing">4950</span>
+                        	<span class="xinxi">35</span>
+                        	<span class="aixin">51</span>
+                        </p>
+                        <p>
+                            <img src="images/1419585870414.jpg">
+                            <span>艺坊视觉设计(原创-门户电商)</span>
+                            <a></a>
+                        </p>
+                </li>       
+			</ul>
+            <ul class="main-small current ">
+                <li >
+                    <a href="#"><img src="images/1419305326277.jpg" alt="" /></a>
+                        <p class="main-small-three">哪些年一起做的专题页面</p>
+                        <p class="main-small-two">
+                        	<span class="yanjing">4888</span>
+                        	<span class="xinxi">1</span>
+                        	<span class="aixin">17</span>
+                        </p>
+                        <p>
+                            <img src="images/1419585870414.jpg">
+                            <span>艺坊视觉设计(门户电商)</span>
+                            <a></a>
+                        </p>
+                </li>       
+			</ul> 
+            
+           
+            
+    </div>
+    </div>
+    
+    <!--翻页部分开始-->
+    <div class="xiayiye">
+    	<a href="#" class="current">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <span>...</span>
+        <a href="#">152</a>
+        <a href="#" class="xiazhang">
+          	<span></span>
+        </a>
+    </div>
+    
+    <!--合作商开始-->
+    <div class="hezuo">
+    	<div class="hezuo-top">
+        	<div class="hezuo-left">
+            	设计公司推荐
+            </div>
+            <div class="hezuo-right">
+            	商务洽谈：407280793
+            </div>
+        </div>
+        <div class="hezuo-bottom">
+        	<ul>
+            	<li>
+                	<img src="images/uelike.png"/>
+                    <div>
+                    优艺客 <em>(北京)</em>
+                    </div>
+                </li>
+                <li>
+                	<img src="images/zm.png"/>
+                    <div>
+                    中美设计顾问  <em>(北京)</em>
+                    </div>
+                </li>
+                <li>
+                	<img src="images/uehtml_yofo.png"/>
+                    <div>
+                    优凡设计   <em>(深圳)</em>
+                    </div>
+                </li>
+                <li>
+                	<img src="images/clh.jpg"/>
+                    <div>
+                    CLH    <em>(深圳)</em>
+                    </div>
+                </li>
+                <li>
+                	<img src="images/memorydesign.jpg"/>
+                    <div>
+                    曼妙设计   <em>(重庆)</em>
+                    </div>
+                </li>
+                <li>
+                	<img src="images/axin.png"/>
+                    <div>
+                    完尚设计    <em>(武汉)</em>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    
+    <!--友情链接开始-->
+    <div class="friend">
+    	<span>友情链接：</span>
+        <a href="#">站酷</a>
+        <a href="#">优艺客uelike</a>
+        <a href="#">设计师网址导航</a>
+        <a href="#">扁平化设计</a>
+        <a href="#">手机UI设计 </a>
+        <a href="#">网页设计</a>
+        <a href="#">PS笔刷吧</a>
+        <a href="#">爱果果</a>
+        <a href="#">腾讯ecd</a>
+        <a href="#">腾讯TGideas</a>
+        <a href="#">APP设计欣赏</a>
+        <a href="#">hao123</a>
+        <a href="#">UI制造者</a>
+        <a href="#">盒子UI</a>
+        <a href="#">hiiishare前沿设计</a>
+        <a href="#">嘟嘟奇</a>
+        <a href="#">Crege创意阁</a>
+        <a href="#">致设计</a>
+        <a href="#">资源下载</a>
+        <a href="#">太白设计会所</a>
+        <a href="#">设计青年</a>
+        <a href="#">图趣网</a>
+        <a href="#">中国设计在线</a>
+        <a href="#">酷站志</a>
+        <a href="#">360安全网址导航</a>
+        <a href="#">360免费杀毒</a>
+        <a href="#">新浪微博UDC</a>
+        
+        
+        
+    </div>
+    
+	<!--footer部分开始-->
+     <div class="footer">
+    	<div class="footer-in">
+        	<div class="link">
+                <a href="#">关于我们</a>
+                <a href="#">发展历程</a>
+                <a href="#">友情链接</a>
+                <a href="#">意见反馈</a>
+                <a href="#" class="weibo"></a>
+                <span>QQ群：385402482</span>
+                <span>UEMO群： 373302682</span>
+            </div>
+            <div class="banquan">
+            Copyright (c) 2013 <em>uelike.com</em>. All Rights Reserved V 1.8.5 京ICP备13015845号-1
+            </div>
+        </div>
+        
+    
+    </div>
+    
+    <!--侧部分开始-->
+
+ 	<div class="subnav">
+        <a href="#" class="erweima">
+        	<span></span>
+        </a>
+        <a href="#" class="fanhui">
+        	<span></span>
+        </a>
+    </div>
+    
+	
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页-广联达软件股份有限公司</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="styles/base.css"/>
+<link rel="stylesheet" type="text/css" href="styles/index.css"/>
+<base target="_blank">
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var $key=0;
+        $(".box ul li:first").clone().appendTo($(".box ul"));
+        $(".box ul li").width($(window).width()); /*li 的宽度是 屏幕的宽度*/
+        $(".right").click(function(event) {
+            /*先++ 后判断 在执行*/
+            $key++;
+            /*留下*/
+            if($key>$(".box ul li").length-1)
+            {
+                $key=1;
+                $(".box ul").css("left",0);
+            }
+            $(".box ul").stop().animate({"left":-$key*$(window).width()},1000);
+
+        });
+        $(window).resize(function(event) {
+            $(".box ul li").width($(window).width());
+        });
+    });
+
+    </script>
+</head>
+
+<body>
+<!--head部分开始-->
+<div class="head">
+	<div class="head-in">
+    	<div class="logo">
+        	<h1><a href="#"></a></h1>
+        </div>
+        <ul >
+        	<li ><a class="xiajian" href="#">全球销售服务网络</a> </li>
+        	<li ><a href="#">全球子公司</a></li>
+        	<li ><a href="#">旗下网站</a></li>
+        	<li ><a href="#">Language</a> </li>
+        </ul>
+        <span class="right">
+        	中国销售服务热线：4000-166-166
+        </span>
+    </div>
+</div>
+
+<!--nav部分开始-->
+<div class="nav">
+	<div class="nav-in">
+    	<ul>
+        	<li><a href="#">首页</a></li>
+        	<li><a href="#">产品&方案</a></li>
+        	<li><a href="#">服务&支持</a></li>
+        	<li><a href="list.html">新闻&资讯</a></li>
+        	<li><a href="#">投资者关系</a></li>
+        	<li><a href="#">走进广联达</a></li>
+        	<li><a href="#">官方商城</a></li>
+        </ul>
+        <div class="search">
+       	  <input type="text"/>
+          <button></button>
+        </div>
+    </div>
+</div>
+
+<!--banner部分开始-->
+<div class="banner-in">
+		<!-- <div class="banner">
+                    <a  class="zuo" href="#"></a>
+            <a  class="you" href="#"></a>
+                </div> -->
+     <div class="box">
+        <a href="javascript:void(0);" class="left"></a>
+        <a href="javascript:;" class="right"></a>
+        <ul>
+            <li class="hero1"></li>
+            <li class="hero2"></li>
+            <li class="hero3"></li>
+            <li class="hero4"></li>
+        </ul>
+
+    </div>
+        <div class="subnav">
+        
+            <ul>
+                	<li>
+                        <a href="#">工程造价</a> 
+                        <a href="#">工程信息</a> 
+                        <a href="#">工程施工</a>
+                        <a href="#">工程设计</a>
+                        <a href="#"> 企业管理</a>
+                        <a href="#">教育培训</a>
+                        <a href="#">电子政务</a>
+                        <a href="#">广联云</a>
+                        <a href="#">广联达BIM</a> 
+                    </li>
+                	<li class="two"><a href="#">预约演示</a> 
+                        <a href="#">培训报名</a> 
+                        <a href="#">售前咨询</a>
+                    </li>
+                    
+                	<li class="three"><a href="#">旺材电商四大优势支撑地产企业冲破困局广联达BIM5D成功签约郑州一建利丰...旺材电商招商抢驻会暨社区供应商预热</a></li>
+           </ul>
+        </div>
+</div>
+
+<!--footer部分开始-->
+<div class="footer">
+	<div class="footer-in">
+    	<div class="footer-top">
+        	<div class="footer-t-left">
+                <dl>
+                    <dt>按访问者</dt>
+                    <dd><a href="#">建设方</a></dd>
+                    <dd><a href="#">施工单位</a></dd>
+                    <dd><a href="#">中介公司</a></dd>
+                    <dd><a href="#">政府部门</a></dd>
+                    <dd><a href="#">设计院</a></dd>
+                    <dd><a href="#">专业院校</a></dd>
+                    <dd><a href="#">设材厂商</a></dd>
+                </dl>
+                <dl>
+                    <dt>加入我们</dt>
+                </dl>
+                <dl>
+                    <dt>学习分享</dt>
+                    <dd><a href="#">数字造价应用版</a></dd>
+                    <dd><a href="#">数字造价专业版</a></dd>
+                    <dd><a href="#">现代项目经理人</a></dd>
+                    <dd><a href="#">建设教育</a></dd>
+                </dl>
+                <dl>
+                    <dt>旗下网站</dt>
+                    <dd><a href="#">MagiCAD</a></dd>
+                    <dd><a href="#">官网商城</a></dd>
+                    <dd><a href="#">服务新干线</a></dd>
+                    <dd><a href="#">广材网</a></dd>
+                    <dd><a href="#">广联云</a></dd>
+                    <dd><a href="#">专业院校</a></dd>
+                    <dd><a href="#">翻样中国</a></dd>
+                    <div class="piao">
+                        <dd><a href="#">云施工</a></dd>
+                        <dd><a href="#">旺材网</a></dd>
+                        <dd><a href="#">工程教育在线</a></dd>
+                        <dd><a href="#">广粉社区</a></dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="footer-t-right">
+            </div>
+        </div>
+    	<div class="footer-bottom">
+            <span class="footer-b-left"> Glodon 1998-2014 广联达软件股份有限公司   京ICP备10021606号　京公网安备110108401054
+            	<img src="images/pic1.gif"/>
+            </span>
+            <span class="footer-b-right">法律声明 | 网站地图 | 留言反馈 </span>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>绿色食品首页</title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="style/base.css"/>
+<link rel="stylesheet" type="text/css" href="style/index.css"/>
+<link rel="stylesheet" type="text/css" href="style/ipad.css" media="(min-width:540px) and (max-width:979px)"/>
+<link rel="stylesheet" type="text/css" href="style/mobile.css" media="(max-width:539px)"/>
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var T=0;
+        $(window).scroll(function(){
+           T=$(window).scrollTop()
+            if(T>200)
+            {
+                $(".back").fadeIn()
+            }
+            else
+            {
+                $(".back").fadeOut()
+            }
+        });
+        $(".back").click(function(){
+            $("body,html").stop().animate({"scrollTop":0},1000);
+        })
+    })
+</script>
+
+</head>
+<body>
+<!--header部分开始-->
+<div class="header">
+	<div class="logo">
+    	<h1>
+            <a href="#" title="绿色食品就是这么任性">绿色食品就是这么任性</a>
+        </h1>
+    </div>
+    <div class="mobile-logo">
+        <h1>绿色食品网</h1>
+    </div>
+</div>
+
+<!--nav部分开始-->
+<div class="site-nav">
+	<div class="nav">
+    	<ul>
+        	<li class="first"><a href="#">网站首页</a></li>
+        	<li><a href="#">公司新闻</a></li>
+        	<li><a href="#">行业动态</a></li>
+        	<li><a href="#">基地管理</a></li>
+        	<li><a href="#">会员服务</a></li>
+        	<li><a href="#">网上购物</a></li>
+        	<li><a href="#">产品展示</a></li>
+        	<li><a href="#">关于我们</a></li>
+        	<li><a href="#">ENGLISH</a></li>
+        </ul>
+    </div>
+</div>
+<div class="mobile-nav">
+        <ul>
+            <li class="first"><a href="#">网站首页</a></li>
+            <li><a href="#">公司新闻</a></li>
+            <li><a href="#">行业动态</a></li>
+            <li><a href="#">基地管理</a></li>
+            <li><a href="#">会员服务</a></li>
+            <li><a href="#">网上购物</a></li>
+            <li><a href="#">产品展示</a></li>
+            <li><a href="#">关于我们</a></li>
+        </ul>
+</div>
+
+
+<!--banner部分开始-->
+<div class="banner">
+	<img src="images/banner.jpg"/>
+</div>
+<div id="slider" class="swipe">
+        <div class="swipe-wrap">
+          <figure>
+            <div class="wrap">
+               <img src="images/1.jpg">
+            </div>
+          </figure>
+          <figure>
+            <div class="wrap">
+               <img src="images/2.jpg">
+            </div>
+          </figure>
+          <figure>
+            <div class="wrap">
+               <img src="images/3.jpg">
+            </div>
+          </figure>
+          <figure>
+            <div class="wrap">
+               <img src="images/4.jpg">
+            </div>
+          </figure>
+          <figure>
+            <div class="wrap">
+               <img src="images/5.jpg">
+            </div>
+          </figure>
+       
+        </div>
+        <ol id="circle">
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+  </div>
+  <script type="text/javascript" src="swipe.js"></script>
+  <script type="text/javascript">
+  var slider =
+  Swipe(document.getElementById('slider'), { // 最大盒子的id
+    auto: 3000,// 3秒 自动切换
+    continuous: true,
+    callback: function(pos) {  // 返回值  pos 是返回当前的索引值
+
+        //console.log(pos);
+        for(var i=0;i<=circle.length-1;i++)// 遍历数组
+        {
+            circle[i].className="";  //  其余的所有li 清除 current类
+            circle[pos].className="current";// 只留下当前的这个li添加current
+        }
+
+    
+    }
+  });
+var circle = document.getElementById('circle').getElementsByTagName('li');//获取li 的数组
+
+  </script>
+
+<!--主体部分开始-->
+<div class="main " >
+	<div class="main-hd clearfix">
+    	<ul>
+        	<li  >
+                <h2><a href="#"><img src="images/one_r1_c1.jpg"></a></h2>
+                <p>主要是通过自然降水、使用农家肥人工除草等传统的农...</p>
+            </li>
+            <li>
+                <h2><a href="#"><img src="images/one_r1_c1.jpg"></a></h2>
+                <p>主要是通过自然降水、使用农家肥人工除草等传统的农...</p>
+            </li>
+            <li>
+                <h2><a href="#"><img src="images/one_r1_c1.jpg"></a></h2>
+                <p>主要是通过自然降水、使用农家肥人工除草等传统的农...</p>
+            </li>
+            <li>
+                <h2><a href="#"><img src="images/one_r1_c1.jpg"></a></h2>
+                <p>主要是通过自然降水、使用农家肥人工除草等传统的农...</p>
+            </li>
+        </ul>
+    </div>
+	<div class="mian-bd">
+    	<div class="about show">
+        	<h2><a href="#"></a></h2>
+            <dl>
+            	<dt><img src="images/about.jpg"></dt>
+                <dd>绿色食品（北京）有限公司立志于有机事业的发展，坚持以人为本，走可持续发展的道路，从农田到餐桌，实行全过程监控体系，以优质的产品为更多的人提供健康的食品安...<a href="#">详细内容>></a></dd>
+            </dl>
+        </div>
+        <div class="products show">
+        	<h2><a href="#"></a></h2>
+            <ul>
+            	<li>
+                	<div><a hred="#"><img src="images/products_r1_c1.jpg"></a></div>
+                    <p><a href="#">(古道)纯牛奶</a></p>
+                </li>
+                <li>
+                	<div><a hred="#"><img src="images/products_r1_c3.jpg"></a></div>
+                    <p><a href="#">油茶籽油</a></p>
+                </li>
+                <li>
+                	<div class="nomargin"><a hred="#"><img src="images/products_r1_c8.jpg"></a></div>
+                    <p><a href="#">龙兴香桃</a></p>
+                </li>
+            </ul>
+        </div>
+        <div class="contact show">
+        	<h2></h2>
+            <p>	地  址：北京市海淀区知春路未来大厦6层 <br/>    
+                邮  编：100191<br/>
+                热线电话：010-62358888<br/>                               
+                传  真：010-88636666<br/>
+                邮  箱：lssp@lssp.com</p>
+        </div>
+    </div>
+</div>
+
+<!--测导航开始-->
+<div class="subnav">
+    <a href="#">网站首页</a>　|
+  　<a href="#">公司新闻</a>　|
+  　<a href="#">行业动态</a>　|
+  　<a href="#">基地管理</a>　|
+  　<a href="#">会员服务</a>　|
+  　<a href="#">网上购物</a>　|
+  　<a href="#">产品展示</a>　|
+  　<a href="#">关于我们</a>
+</div>
+<div class="padsubnav">
+    <a href="#">网站首页</a>　
+  　<a href="#">公司新闻</a>　
+  　<a href="#">行业动态</a>　
+  　<a href="#">基地管理</a>　
+  　<a href="#">会员服务</a>
+  　<a href="#">网上购物</a>　
+  　<a href="#">产品展示</a>
+  　<a href="#">关于我们</a>
+</div>
+
+
+<!--footer部分开始-->
+<div class="footer">
+	<div class="footer-in">
+    	<div class="footer-left">
+        	电话：010-62358888　传真：010-88636666　客服电话：400-0809-560<br/>
+            绿色食品（北京）有限公司 版权所有 京ICP备11036362号　
+        </div>
+        <div class="footer-right"></div>
+    </div>
+</div>
+<div class="back">顶部</div>
+</body>
+</html>

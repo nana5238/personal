@@ -1,0 +1,42 @@
+/* CSS Document */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td { margin:0; padding:0; }
+body { font-size:12px; color:#666; font-family:Verdana, Microsoft YaHei, Simsun; background:url(../images/beijing.png) no-repeat top center; line-height:19px; }
+fieldset, img { border:0; }
+ol, ul { list-style:none; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+em { font-style:normal; }
+input, button, select, textarea { outline:none; } 
+textarea { resize:none; }
+a{text-decoration:none;font-size:12px;}
+a:hover{text-decoration:underline;}
+img{display:block;}
+.clearfix:before,.clearfix:after{content:"";display:table;}
+.clearfix:after{clear:both;}
+.clearfix{zoom:1;}
+
+/*header部分开始*/
+.header{width:975px;height:99px;margin:0 auto;padding:20px 0 0 5px;}
+.header .logo{width:168px;height:76px;background:url(../images/logo.jpg) no-repeat;}
+.logo h1 a{text-indent:-2000em;overflow:hidden;display:block;height:76px;}
+.mobile-logo{display: none;}
+/*nav部分开始*/
+.site-nav{width:980px;height:60px;margin:0 auto;background:url(../images/site-nav-bg.jpg) no-repeat bottom right;}
+.nav{height:44px;background:url(../images/nav-bg.jpg) repeat-x;}
+.nav ul{height:44px;background:url(../images/nav-right.jpg) no-repeat top right;}
+.nav ul li{float:left;padding:0 25px;_padding:0 23px;background:url(../images/nav-li-bg.jpg) no-repeat top left;}
+.nav ul li a{font-size:14px;color:#fff;font-weight:bold;line-height:44px;}
+.nav ul li.first{background:url(../images/nav-left.jpg) no-repeat top left;padding-left:30px;}
+/*banner部分开始*/
+.banner{width:980px;margin:0 auto;margin-top:2px;}
+
+/*测导航开始*/
+.subnav{width:980px;height:35px;margin:0 auto;margin-top:12px;background:url(../images/subnav.bg.jpg) repeat-x;text-align:center;line-height:35px;color:#fff;}
+.subnav a{color:#fff;}
+.mobile-nav{display: none;}
+/*footer部分开始*/
+.footer{height:91px;width:100%;background:url(../images/footer-bg.jpg) repeat-x;margin-top:1px;}
+.footer-in{width:980px;margin:0 auto;padding-top:17px;}
+.footer-left{line-height:25px;float:left;}
+.footer-right{width:108px;height:49px;background:url(../images/sublogo.jpg) no-repeat;float:right;}
+.swipe{display: none;}
+.back{display:none;}

@@ -1,0 +1,682 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>改变从这里开始-壹心理</title>
+<link rel="stylesheet" type="text/css" href="style/index.css"/>
+<base target="_blank">
+<script type="text/javascript" src="style/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".mainr-in ul li").hover(function() {
+            $(this).addClass('current').siblings().removeClass('current');
+        });
+        $("img").hover(function() {
+            $(this).fadeTo(0, 0.7)
+        }, function() {
+            $(this).fadeTo(0, 1)
+        });
+
+        $(".search input").focus(function(event) {
+            if($(this).val()=="搜索心理学内容/心理测试/心理圈")
+            {
+                $(this).val("")
+            }
+            $(this).css("color","#000");
+            });
+             
+        $(".search input").blur(function(event) {
+            if($(this).val()=="")
+           {
+            $(this).val("搜索心理学内容/心理测试/心理圈")
+            $(this).css("color","#ccc")
+            }
+         });
+        var timer=setInterval(fun, 2000)
+        var num=0;
+        
+        function fun()
+        {    
+            $(".cont-l-t ol li").eq(num).fadeOut(600)
+           num++;
+            num=num%$(".cont-l-t ol li").length;
+            $(".cont-l-t ol li").eq(num).fadeIn(600)
+            $(".cont-l-t .circle li").eq(num).addClass('current').siblings().removeClass('current')            
+        }
+        $(".pic").hover(function() {
+            clearInterval(timer);
+            timer=null;
+        }, function() {
+            clearInterval(timer);
+            timer=setInterval(fun, 2000);
+        });
+        $(".circle li").click(function(event) {
+            $(".cont-l-t ol li").eq(num).fadeOut(600);
+            num=$(this).index()
+            $(".cont-l-t ol li").eq(num).fadeIn(600);
+            $(".circle li").eq(num).addClass('current').siblings().removeClass('current');
+        });
+                
+        fun();
+        
+        $(".follow ul li").each(function(index, el) {
+            num=-$(this).index()*52
+            $(this).find("a").css("background-position","0 "+num+"px")
+        }); 
+        $(".follow ul li").hover(function() {
+            num=-$(this).index()*52
+            $(this).children("a").css("background-position","-59px "+num+"px")
+        }, function() {
+            $(this).children("a").css("background-position","0 "+num+"px")
+        }); 
+        $(".follow li:last").click(function(event) {
+            $("body,html").stop().animate({"scrollTop":"0"},3000)   
+        });  
+        $(window).scroll(function(event) {
+            var arr=$(document).scrollTop()
+            if(arr>100)
+            {
+                $(".follow").show();
+            }
+            else
+            {
+                $(".follow").hide();
+            }
+        });
+        
+    });
+
+</script>
+</head>
+
+<body>
+<!--头部导航开始-->
+<div class="topnav">
+	<div class="topnav-in">
+        <ul class="topin-l">
+            <li class="home"><a href="#">首页</a></li>
+            <li><a href="#">心理杂志</a></li>
+            <li><a href="list.html">心理测试</a></li>
+            <li><a href="#">心理氧吧</a></li>
+            <li><a href="#">问答</a></li>
+            <li><a href="#">心理圈</a></li>
+            <li><a href="#">心理FM</a></li>
+            <li><a href="#">小组</a></li>
+            <li><a href="#">更多</a></li>
+        </ul>
+        <ul class="topin-r">
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+        </ul>
+    </div>
+</div>
+
+<!--头部下方开始-->
+<div class="top-bd">
+	<div class="topbd-in">
+        <div class="logo">
+            <a href="#" title="改变从这里开始！">改变从这里开始-壹心理</a>
+        </div>
+        <ul class="s-nav">
+        	<li><a href="#">关注动态</a></li>
+        	<li><a href="#">精彩发现</a></li>
+        	<li><a href="#">我的主页</a></li>
+        	<li><a href="#">返回旧版</a></li>
+        </ul>
+        <div class="search">
+                <input type="text" id="txt" value="搜索心理学内容/心理测试/心理圈"/>
+                <button><s></s></button>
+                <label for="txt"></label><!-- 搜索心理学内容/心理测试/心理圈 -->
+        </div>
+    </div>
+</div>
+
+<!--主体第一部分开始-->
+<div class="main">
+	<div class="s-banner">
+        <a href="#"><img src="images/topbanner.jpg" /></a>
+    </div>
+    <div class="cont">
+    	<div class="cont-l">
+        	<div class="cont-l-t">
+            	<div class="pic">
+                    <ol>
+                        <li style="dispaly:block">
+                            <a href="#">
+                            <img src="images/sidebanner-1.jpg"/>
+                            <div class="blackbox"></div>
+                            <p>一分钟心理学：灵魂伴侣存在现状</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="images/sidebanner-2.jpg"/>
+                            <div class="blackbox"></div>
+                            <p>一分钟心理学：灵魂伴侣存在现状</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="images/sidebanner-3.jpg"/>
+                            <div class="blackbox"></div>
+                            <p>一分钟心理学：灵魂伴侣存在现状</p>
+                            </a>
+                        </li>
+                    </ol>
+                    <ul class="circle">
+                        <li>●</li>
+                        <li>●</li>
+                        <li class="current">●</li>
+                    </ul>
+                </div>
+            	<ul class="word">
+                	<li class="first">
+                        <a href="#"><h2>如何让婚姻中的矛盾与幸福共存？</h2>                        <p>婚姻中必然存在矛盾，但矛盾又幸福就像痛并快乐着，同样可以<br/>预期。那我们该怎么做呢?</p></a>
+                    </li>
+                    <li class="second"><a href="#">内向者与世界相处的十种方式</a></li>
+                    <li><a href="#">沉思分析：抑郁的四大好处</a></li>
+                </ul>
+            </div>
+            <div class="cont-l-f">
+            	<p class="qs">心理问答<a href="#"> | 更多</a></p>
+                <div class="left-contf">
+                    <h2>
+                     <a href="#">问：没有准备好而索性放弃考研，是神马心理?</a>
+                    </h2>
+                    <p>答：大概是“我知道我会被‘我要报考的学校‘拒绝，所以，在它拒绝我之前，我先把它拒绝了，那样我就不会受到伤...</p>
+                    <h3>
+                     <i class="current">1</i><a href="#">老是睡不好觉，求帮助</a>
+                    </h3>
+                    <h3>
+                     <i>2</i><a href="#">小孩的出生，让我不知所措</a>
+                    </h3>
+                    <h3>
+                     <i>3</i><a href="#">别人说我很强势，怎么办？</a>
+                    </h3>
+                </div>
+                	<ul class="right-contf">
+                    	<li>
+                            <div class="contf-pic">
+                                <a href="#">
+                                    <img src="images/qusetion-3.jpg" />
+                                </a>
+                            </div>
+                            <div class="contf-text">
+                            <p class="contf-name">
+                                <a href="#">不忘己心初心</a>
+                            </p>
+                            <p>
+                                <a href="#">我是个空想主义者，怎么办？</a>
+                            </p>
+                            </div>
+                        </li>
+                    	<li>
+                            <div class="contf-pic">
+                                <a href="#">
+                                    <img src="images/qusetion-2.jpg" />
+                                </a>
+                            </div>
+                            <div class="contf-text">
+                            <p class="contf-name">
+                                <a href="#">骊天</a>
+                            </p>
+                            <p>
+                                <a href="#">如何变得开朗一些？</a>
+                            </p>
+                            </div>
+                        </li>
+                    	<li>
+                            <div class="contf-pic">
+                                <a href="#">
+                                    <img src="images/qusetion-1.jpg" />
+                                </a>
+                            </div>
+                            <div class="contf-text">
+                            <p class="contf-name">
+                                <a href="#">斑马茶爷</a>
+                            </p>
+                            <p>
+                                <a href="#">喜欢上同性好友，怎么办？</a>
+                            </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        <div class="cont-r">
+        	<div class="column">
+            	<h3>心理专栏</h3>
+                <ul>
+                    <li>
+                        <div class="contf-pic">
+                            <a href="#">
+                                <img src="images/xue.jpg" />
+                            </a>
+                        </div>
+                        <div class="contf-text">
+                            <p>
+                                <a href="#">我做什么，关你屁事？</a>
+                            </p>
+                            <p class="contf-name">
+                                <a href="#">最长的总是最差的时光？</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contf-pic">
+                            <a href="#">
+                                <img src="images/dream.jpg" />
+                            </a>
+                        </div>
+                        <div class="contf-text">
+                            <p>
+                                <a href="#">为什么梦到想跑但跑很慢，想喊又喊...</a>
+                            </p>
+                            <p class="contf-name">
+                                <a href="#">为何连续4次梦到乘飞机没赶上？</a>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="test">
+                <h3>心理测试<a href="#"> | 更多</a></h3>
+                <div class="test-in">
+                	<a href="#"><img src="images/text-1.jpg"/></a>
+                    <p><a href="#">你最该学习哪种社交技能？</a></p>
+                    <p><button>开始测试</button></p>
+                </div>
+            </div>
+            <div class="specialty">
+                <h3>专业测试<a href="#"> | 更多</a></h3>
+                <div class="pic-l">
+                	<a href="#"><img src="images/text-2.jpg"/></a>
+                    <p><a href="#">测你工作与家庭之间的...</a></p>
+                </div>
+                <div class="pic-r">
+                	<a href="#"><img src="images/text-3.jpg"/></a>
+                    <p><a href="#">测你对目前的婚姻有多...</a></p>
+                </div>
+            </div>
+        </div>	
+    </div>
+</div>
+
+<!--主体第二部分开始-->
+<div class="mainbottom ">
+	<div class="mainbottom-in">
+    	<div class="mainin-l ">
+        	<div class="mainin-t clearfix">
+                <h3>
+                    心理圈
+                    <a href="#"> | 更多</a>
+                    <ul>
+                        <li class="white"><</li>
+                        <li class="dian">●</li>
+                        <li class="dian white">●</li>
+                        <li>></li>
+                    </ul>
+                </h3>
+                <div class="l-main">
+                    <a href="#" class="link">
+                    <img src="images/circle-1.jpg" />
+                    <div class="blackbox"></div>
+                    <p>每一本世界名著都是一座富矿</p>
+                    </a>
+                    <h4><a href="#">一个“很好”的姑娘</a></h4>
+                    <span>来自：北京颢润心理咨询</span>
+                    <h4 class="maintitle"><a href="#">爱自己，先找到自己</a></h4>
+                    <span>来自：六度自由</span>
+            	</div>
+                <div class="r-main">
+                	<ul>
+                    	<li>
+                        	<a href="#"><img src="images/circle-2.jpg" /></a>
+                            <dl>
+                            	<dt><a href="#">世图心理学编辑部</a></dt>
+                                <dd><a href="#">【大师经典】这个世界，有什么是...</a></dd>
+                                <dd><a href="#">人都是有价值的，并且能够照顾好自己</a></dd>
+                            </dl>
+                        </li>
+                    	<li>
+                        	<a href="#"><img src="images/circle-3.jpg" /></a>
+                            <dl>
+                            	<dt><a href="#">广州爱灵心理咨询中心</a></dt>
+                                <dd><a href="#">【张丽萍】互动问答：人际交往，...</a></dd>
+                                <dd><a href="#">【程捷】找父母？还是找伴侣？</a></dd>
+                            </dl>
+                        </li>
+                    	<li>
+                        	<a href="#"><img src="images/circle-4.jpg" /></a>
+                            <dl>
+                            	<dt><a href="#">穿行心理工作室</a></dt>
+                                <dd><a href="#">咨询室故事：再跟咨询师怄气</a></dd>
+                                <dd><a href="#">穿行:如何让咨询开始提升婚姻幸福</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mainin-b clearfix">
+            	<h3>心理活动</h3>
+                <ul class="t-mainin-b">
+                    <li><a href="#">全部</a></li>
+                    <li><a href="#">北京</a></li>
+                    <li><a href="#">上海</a></li>
+                    <li><a href="#">广州</a></li>
+                    <li><a href="#">深圳</a></li>
+                    <li class="more"><a href="#">更多</a></li>
+                </ul>
+                <div class="f-mainin-b">
+                	<ul class="f-l">
+                    	<li>
+                        <a href="#"><img src="images/circle-1.gif" /></a>
+                        <dl>
+                        	<dt>
+                            <a href="#">「边缘型人格障碍」心理咨询培训课程</a>
+                            </dt>
+                            <dd>2015-01-12</dd>
+                            <dd>北京市海淀区待定</dd>
+                        </dl>
+                        </li>
+                    	<li>
+                        <a href="#"><img src="images/circle-7.jpg" /></a>
+                        <dl>
+                        	<dt>
+                            <a href="#">家庭治疗新书《热锅上的家庭》赠书征文</a>
+                            </dt>
+                            <dd>2014-12-08</dd>
+                            <dd>其它亚洲anywhere</dd>
+                        </dl>
+                        </li>
+                    </ul>
+                	<ul class="f-r">
+                    	<li>
+                        <a href="#"><img src="images/circle-6.jpg" /></a>
+                        <dl>
+                        	<dt>
+                            <a href="#">深圳子和心理咨询中心长期招募教学个案</a>
+                            </dt>
+                            <dd>2014-12-05</dd>
+                            <dd>广东省深圳市锦绣花园三期D栋9A</dd>
+                        </dl>
+                        </li>
+                    	<li>
+                        <a href="#"><img src="images/circle-8.jpg" /></a>
+                        <dl>
+                        	<dt>
+                            <a href="#">从张爱玲的一生谈什么是自恋</a>
+                            </dt>
+                            <dd>2014-12-20</dd>
+                            <dd>上海市徐汇区斜土路2601号嘉汇广场T2幢31D</dd>
+                        </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    	<div class="mainin-r">
+        	<div class="mainin-r-top">
+            	<h3>
+                    心理前沿
+                    <a href="#"> | 更多</a>
+                </h3>
+                <div class="mainr-in">
+                	<ul>
+                    	<li class="current">
+                            <div class="one" >
+                                <a href="#">嗑药的大脑会变成《超体》吗？</a>
+                            </div>
+                            <div class="tow">
+                            <a href="#"><img src="images/circle-5.jpg" /></a>
+                            <a href="#" class="title">嗑药的大脑会变成《超体》吗？</a>
+                            <p>2606人看过</p>
+                            <div>
+                        </li>
+                    	<li>
+                            <div class="one">
+                            <a href="#">上太空是一种怎样的心理体验？</a>
+                            </div>
+                            <div class="tow">
+                            <a href="#"><img src="images/circle-5.jpg" /></a>
+                            <a href="#" class="title">嗑药的大脑会变成《超体》吗？</a>
+                            <p>2606人看过</p>
+                            <div>
+                            
+                        </li>
+                    	<li>
+                            <div class="one">
+                            <a href="#" class="title-1">完美主义倾向反而让人轻生？</a>
+                            </div>
+                            <div class="tow">
+                            <a href="#"><img src="images/circle-5.jpg" /></a>
+                            <a href="#" class="title">嗑药的大脑会变成《超体》吗？</a>
+                            <p>2606人看过</p>
+                            <div>
+                        </li>
+                    	<li>
+                            <div class="one">
+                            <a href="#" class="title-1">“积极暗示”能够提高老年人的生理机能</a>
+                            </div>
+                            <div class="tow">
+                            <a href="#"><img src="images/circle-5.jpg" /></a>
+                            <a href="#" class="title">嗑药的大脑会变成《超体》吗？</a>
+                            <p>2606人看过</p>
+                            <div>
+                        </li>
+                    	<li>
+                            <div class="one">
+                            <a href="#" class="title-1">一起经历过的痛苦，令我们变得更团结
+                            </a>
+                            </div>
+                            <div class="tow">
+                            <a href="#"><img src="images/circle-5.jpg" /></a>
+                            <a href="#" class="title">嗑药的大脑会变成《超体》吗？</a>
+                            <p>2606人看过</p>
+                            <div>
+                        </li>
+                    	<li>
+                            <div class="one">
+                            <a href="#" class="title-1">近朱者赤：多与好孩子在一起进步更快</a>
+                            </div>
+                            <div class="tow">
+                            <a href="#"><img src="images/circle-5.jpg" /></a>
+                            <a href="#" class="title">嗑药的大脑会变成《超体》吗？</a>
+                            <p>2606人看过</p>
+                            <div>
+                        </li>
+                    	<li>
+                            <div class="one">
+                            <a href="#">壹心理调查：很少90后能完成的事</a>
+                            </div>
+                            <div class="tow">
+                            <a href="#"><img src="images/circle-5.jpg" /></a>
+                            <a href="#" class="title">嗑药的大脑会变成《超体》吗？</a>
+                            <p>2606人看过</p>
+                            <div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mainin-r-ftr">
+            	<h3>心理专题</h3>
+                <ul>
+                	<li>
+                    	<a href="#"><img src="images/circle-2.gif"/></a>
+                        <a href="#">国内优质心理咨询机构推荐</a>
+                    </li>
+                	<li>
+                    	<a href="#"><img src="images/circle-9.jpg"/></a>
+                        <a href="#">心理操：保护你的身心与节操</a>
+                    </li>
+                	<li>
+                    	<a href="#"><img src="images/circle-3.png"/></a>
+                        <a href="#">如何让音乐拯救你的生活</a>
+                    </li>
+                	<li>
+                    	<a href="#"><img src="images/circle-11.jpg"/></a>
+                        <a href="#">心理公益课：心理皮肤与儿童成长</a>
+                    </li>
+                	<li>
+                    	<a href="#"><img src="images/circle-3.png"/></a>
+                        <a href="#">一起战胜万恶的拖延症</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--主体第三部分开始-->
+	<div class="mainlast-t">
+    	<div class="r-t">
+        	<h3>
+                心理FM
+                <a href="#"> | 更多</a>
+                <ul>
+                    <li class="white"><</li>
+                    <li class="dian">●</li>
+                    <li class="dian white">●</li>
+                    <li>></li>
+            	</ul>
+            </h3>
+			<div class="r-t-l">
+            	<a href="#"><img src="images/fm-1.jpg" /></a>
+                <div class="r-title">
+                	<h4><a href="#">怎么做个好爸妈？</a></h4>
+                    <h6>主播： 周小猫</h6>
+                    <p class="text">做自己的好父母，才能做孩子的好爸妈。做好自己，才能和他们有更深的连接。我们不是没有爱的能力，而是缺少爱的方法。</p> 
+                    <p class="store">398人收藏</p>
+                    <p class="listen">
+                    <a href="#">立即收听</a>
+                    <s></s>
+                    </p>
+                </div>
+            </div>
+			<div class="r-t-r">
+            	<ul>
+                	<li>
+                    	<a href="#"><img src="images/fm-3.png"/></a>
+                        <h4><a href="#">等你爱我</a></h4>
+                        <span class="zhubo">主播:峰_小峰</span>
+                        <span class="store">383人收藏</span>
+                    </li>
+                	<li>
+                    	<a href="#"><img src="images/fm-3.png"/></a>
+                        <h4><a href="#">等你爱我</a></h4>
+                        <span class="zhubo">主播:峰_小峰</span>
+                        <span class="store">383人收藏</span>
+                    </li>
+                	<li>
+                    	<a href="#"><img src="images/fm-3.png"/></a>
+                        <h4><a href="#">等你爱我</a></h4>
+                        <span class="zhubo">主播:峰_小峰</span>
+                        <span class="store">383人收藏</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="l-t">
+        	<h3>心理应用</h3>
+            <ul>
+            	<li>
+                    <a href="#"><img src="images/yy-1.jpg"/></a>
+                    <p><a href="#">微笑墙</a></p>
+                </li>
+            	<li>
+                    <a href="#"><img src="images/yy-2.jpg"/></a>
+                    <p><a href="#">树洞</a></p>
+                </li>
+            	<li class="nomargin">
+                    <a href="#"><img src="images/yy-3.jpg"/></a>
+                    <p><a href="#">心理话题</a></p>
+                </li>
+            	<li>
+                    <a href="#"><img src="images/yy-4.jpg"/></a>
+                    <p><a href="#">放空一分钟</a></p>
+                </li>
+            	<li>
+                    <a href="#"><img src="images/yy-5.jpg"/></a>
+                    <p><a href="#">治愈系语录</a></p>
+                </li>
+            	<li class="nomargin">
+                    <a href="#"><img src="images/yy-6.jpg"/></a>
+                    <p><a href="#">小确幸</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+	<div class="mainlast-b">
+    	<div class="l-b">
+        	<ul>
+            	<li>
+                	<h3>
+                    心理游戏
+                    <a href="#"> | 更多</a>
+               		</h3>
+                    <p><a href="#"><img src="images/ft-1.png"/></a></p>
+                    <h4><a href="#">励志游戏：无腿英雄</a></h4>
+                    <p><a href="#">策略游戏：小羊肖恩回家之伦敦迷...</a></p>
+                    <p><a href="#">海难救生员</a></p>
+                </li>
+            	<li>
+                	<h3>
+                    治愈系图片
+                    <a href="#"> | 更多</a>
+               		</h3>
+                    <p><a href="#"><img src="images/ft-2.jpg"/></a></p>
+                    <h4><a href="#">总以为爱是全部的心跳</a></h4>
+                    <p><a href="#">孩砸他爹才是最好的玩具</a></p>
+                    <p><a href="#">油画般的雨中街景
+</a></p>
+                </li>
+            	<li class="nomargin">
+                	<h3>
+                    心理短片
+                    <a href="#"> | 更多</a>
+               		</h3>
+                    <p><a href="#"><img src="images/ft-3.jpg"/></a></p>
+                    <h4><a href="#">喊别人“胖子” 他会变得更胖</a></h4>
+                    <p><a href="#">TED演讲：越自私的人越有钱？</a></p>
+                    <p><a href="#">第一次约会该谁买单？</a></p>
+                </li>
+            </ul>
+        </div>
+        <div class="r-b">
+        	<h3>
+                订阅心理学
+                <a href="#"> | 更多</a>
+            </h3>
+            <span class="mail"><a href="#"><i></i>邮件</a></span>
+            <span class="wei"><a href="#"><i></i>微信</a></span>
+            <span class="cell"><a href="#"><i></i>手机</a></span>
+        </div>
+    </div>
+    
+<!--底部开始-->
+<div class="footer">
+	<ul>
+    	<li><a href="#">关于我们</a></li>
+    	<li><a href="#">加入我们</a></li>
+    	<li><a href="#">联系我们</a></li>
+    	<li><a href="#">免责声明</a></li>
+    	<li><a href="#">友情链接</a></li>
+    	<li><a href="#">网站地图</a></li>
+    	<li><a href="#">手机版</a></li>
+    	<li><a href="#">手机应用</a></li>
+    	<li><a href="#">投稿</a></li>
+    </ul>
+</div>
+<div class="footer-b"><p><em>©</em>2005－2014  xinli001.com  All Rights Reserved.   粤ICP备12051153号  安全联盟</p></div>
+
+<div class="follow">
+    <ul>
+        <li><a href="javascript:;"></a></li>
+        <li><a href="javascript:;"></a></li>
+        <li><a href="javascript:;"></a></li>
+    </ul>
+</div>
+</body>
+</html>

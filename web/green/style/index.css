@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*主体部分开始*/
+.main{width:980px;height:312px;margin:0 auto;margin-top:10px;border-radius:5px 5px 0 0;background:#fff;}
+.main-hd{border-bottom:1px solid #E0E0E0;padding:10px 0 10px 12px;}
+.main-hd li{background:url(../images/main-hd-li.jpg) no-repeat; float:left;margin-right:3px;width:217px;height:75px;padding:10px 10px 0px 10px;}
+.main-hd li p{margin-left:38px;}
+
+.show{height:200px;float:left;background:url(../images/main-bd-bj.jpg) no-repeat top right;padding:10px 10px 0 10px;}
+.show h2{background:url(../images/content_r1_c1.jpg) no-repeat;height:60px;}
+.about{width:303px;}
+.about h2 a{background:url(../images/mone.jpg) no-repeat;display:block;width:35px;height:24px;margin-left:auto;}
+.about dt{float:left;padding:3px;border:1px solid #ccc;}
+.about dd{width:189px;float:right;line-height:20px;}
+.about dd a{color:#398D00;}
+.products{width:388px;}
+.products h2{background-image:url(../images/content_r1_c3.jpg);}
+.products h2 a{background:url(../images/mone.jpg) no-repeat;display:block;width:35px;height:24px;margin-left:auto;}
+.products li{float:left;}
+.products li div{border:1px solid #ccc;padding:3px;margin-right:6px;width:117px;}
+.products li div.nomargin{margin-right:0;}
+.products li p{text-align:center;margin-top:5px;}
+.contact{width:229px;background:none;}
+.contact h2{background-image:url(../images/content_r2_c5.jpg);}
+.contact p{margin-left:10px;}
+
+/*列表页主体部分开始*/
+.list-main{width:960px;padding:10px;background:#fff;margin:0 auto;margin-top:10px;border-radius:5px 5px 0 0;}
+.list-left{float:left;width:214px;}
+.list-l-t ul,.list-l-b p{background-color:#F4F4F4;border-left:1px solid #E0E0E0;border-bottom:1px solid #E0E0E0;margin:0 7px;padding:0 12px;}
+.list-l-t ul li{line-height:32px;height:32px;background:url(../images/list-li-bg.jpg) no-repeat left bottom;}
+.list-l-t ul li a{background:url(../images/list-li-a-bj.jpg) no-repeat left center;padding-left:16px;color:#000;}
+.list-l-t ul li a:hover{background-image:url(../images/li-a.jpg);text-decoration:none;color:#FF4000;}
+
+.list-right{float:right;width:734px;height:500px;}
+.list-r-t{height:50px;background:url(../images/list-r-t-bj.jpg) no-repeat;}
+.list-r-t h4{float:left;margin-top:15px;margin-left:45px;font-size:14px;}
+.list-r-t span{float:right;margin-top:18px;margin-right:25px;}
+.list-right ul{margin:4px 15px;}
+.list-right  li{padding-top:8px;height:37px;background:url(../images/list-li-bj.jpg) repeat-x left bottom;}
+.list-right  li a{line-height:37px;background:url(../images/li-bj-a.jpg) no-repeat left center;padding-left:15px;color:#000;}
+.list-right  li span{float:right;}
+.list-right .teshu{display:block;text-align:center;padding-top:15px;}
+
+/*详情页主体部分开始*/
+.atticle-bottom{padding:10px 10px 0 10px;font-family:"微软雅黑";color:#000;}
+.atticle-bottom h2{height:30px;font-size:14px;text-align:center;}
+.atticle-bottom p{line-height:22px;text-indent:2em;}
+.padsubnav{display:none;}
